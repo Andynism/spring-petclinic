@@ -21,7 +21,7 @@ pipeline {
   			branch 'master'
   		}
       steps {
-        sh './mvnw deploy -DaltDeploymentRepository=internal.repo::default::file:///Users/andyvu⁨/Downloads⁩/SOEN345⁩/⁨Assignments⁩/Assignment6⁩/⁨PetClinic/spring-petclinic/'
+        sh './mvnw deploy -DaltDeploymentRepository=internal.repo::default::file:///Users/andyvu⁨/Downloads⁩/SOEN345⁩/⁨Assignments⁩/Assignment6⁩/⁨PetClinic/'
         slackSend(color: 'good',
                   message: "${currentBuild.fullDisplayName} build was successful!")
         }
