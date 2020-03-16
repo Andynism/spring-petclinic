@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh './mvnw deploy -DaltDeploymentRepository=internal.repo::default::file:///Users/andyvu⁩/⁨Downloads⁩/SOEN345⁩/⁨Assignments⁩/Assignment6⁩/⁨PetClinic⁩'
+        sh './mvnw deploy -DaltDeploymentRepository=internal.repo::default::file:///Users/andyvu⁩/⁨Downloads⁩/SOEN345⁩/⁨Assignments⁩/Assignment6⁩/⁨PetClinic/spring-petclinic'
         slackSend(color: 'good',
                   message: "${currentBuild.fullDisplayName} build was successful!")
         }
