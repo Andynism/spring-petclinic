@@ -17,6 +17,9 @@ pipeline {
       }
     }
     stage('Deploy') {
+      when {
+  			branch 'master'
+  		}
       steps {
         sh './mvnw deploy -DaltDeploymentRepository=internal.repo::default::file:///andyvu⁩/⁨Downloads⁩/SOEN345⁩/⁨Assignments⁩/Assignment6⁩/⁨PetClinic/spring-petclinic/'
         slackSend(color: 'good',
